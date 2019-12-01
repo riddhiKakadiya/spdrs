@@ -105,8 +105,7 @@ func AvailableETFs(w http.ResponseWriter, r *http.Request){
 	var statusCode string = Signin(w, r)
 	if (statusCode == "http.StatusInternalServerError")||(statusCode == "http.StatusBadRequest")||(statusCode == "http.StatusUnauthorized"){
 		w.WriteHeader(401)
-	}
-	else{
+	}else{
 	    Db, err := sql.Open("mysql", "root:riddhi@tcp(127.0.0.1:3306)/stateStreet")
 	    if err != nil{panic(err.Error())}
 
@@ -128,8 +127,8 @@ func AvailableETFs(w http.ResponseWriter, r *http.Request){
 	    w.Header().Set("Content-Type", "application/json")
 		w.Write(jsonData)
 		w.WriteHeader(200)	
+	}
 }
-
 
 func AvailableTickers(w http.ResponseWriter, r *http.Request){ 
 	//return the status code depending on whether the user is authorized or not

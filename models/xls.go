@@ -4,12 +4,15 @@ import (
     "io"
     "net/http"
     "os"
+    "os/exec"
 )
 
 func DownloadData() {
+    //delete already present file
+    exec.Command("sh","-c","rm SPY_All_Holdings2.csv").Output() 
     // fileUrl := "https://us.spdrs.com/site-content/xls/SPY_All_Holdings.xls?fund=SPY&docname=All+Holdings&onynx_code1=&onyx_code2="
     fileUrl := "https://us.spdrs.com/site-content/xls/SPY_All_Holdings.xls"
-    if err := DownloadFile("SPY_All_Holdings3.csv", fileUrl); err != nil {panic(err)}
+    if err := DownloadFile("SPY_All_Holdings2.csv", fileUrl); err != nil {panic(err)}
 }
 
 // DownloadFile will download a url to a local file. It's efficient because it will

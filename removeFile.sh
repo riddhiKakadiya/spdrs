@@ -1,0 +1,2 @@
+unlink filename
+rm filename
