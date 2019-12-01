@@ -1,2 +1,0 @@
-unlink filename
-rm filename
