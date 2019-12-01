@@ -2,7 +2,6 @@ package main
 
 import(
     "fmt"
-    // "Users/riddhikakadiya/go/src/github.com/riddhikakadiya/spdrs/models/db"
     "encoding/json"
     "github.com/riddhikakadiya/spdrs/models"
     "time"
@@ -17,10 +16,16 @@ import(
 /***********************************************************************************************************************************/
 //user authentication using JWT
 var jwtKey = []byte("my_secret_key")
+
+// var users = map[string]string{
+// 	"user1": "password1",
+// 	"user2": "password2",
+// }
 var users = map[string]string{
 	"user1": "password1",
 	"user2": "password2",
 }
+
 // Create a struct to read the username and password from the request body
 type Credentials struct {
 	Password string `json:"password"`
@@ -54,7 +59,7 @@ func Signin(w http.ResponseWriter, r *http.Request) (string){
 		return "http.StatusUnauthorized"
 	}
 	// Declare the expiration time of the token, here, we have kept it as 5 minutes
-	expirationTime := time.Now().Add(5 * time.Minute)
+	expirationTime := time.Now().Add(1 * time.Minute)
 	// Create the JWT claims, which includes the username and expiry time
 	claims := &Claims{
 		Username: creds.Username,
@@ -81,9 +86,7 @@ func Signin(w http.ResponseWriter, r *http.Request) (string){
 	})
 	return "http.StatusOK"
 }
-// func authenticateUser(w http.ResponseWriter, r *http.Request){ 
 
-// }
 /***********************************************************************************************************************************/
 
 type ETF struct {

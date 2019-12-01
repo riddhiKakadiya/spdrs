@@ -1,9 +1,9 @@
 
-# Go Application that parses SPDR ETFs (​www.spdrs.com​) and stores into the database.
+## Go Application that parses SPDR ETFs (​www.spdrs.com​) and stores into the database.
 
-##Technologies: Go, mariadb
+## Technologies: Go, mariadb
 
-##Setting up Environment
+## Setting up Environment
 
 1. Install Go using the link https://golang.org/dl/. Install packages using using following commangs:
 ```bash
@@ -23,9 +23,9 @@ Refer notes.md to create database
 go run main.go
 ```
 
-##APIs
+## APIs
 
-##Any HTTP client with support for cookies (like Postman, or your web browser) can be used to access the APIs:
+## Any HTTP client with support for cookies (like Postman, or your web browser) can be used to access the APIs:
 
 ```bash
 1. http://localhost:8080/spdr/etfs
