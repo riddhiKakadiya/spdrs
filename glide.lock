@@ -1,0 +1,14 @@
+hash: 24711a0ac3e91d00f1527421a5902fd8482d4639145c98f6470e2f544380b7c4
+updated: 2019-12-02T14:37:06.097199-05:00
+imports:
+- name: github.com/dgrijalva/jwt-go
+  version: 5e25c22bd5d6de03265bbe5462dcd162f85046f6
+- name: github.com/go-sql-driver/mysql
+  version: 15462c1d60d42ecca11d6ef9fec0b0afd5833459
+- name: github.com/gorilla/mux
+  version: 49c01487a141b49f8ffe06277f3dca3ee80a55fa
+- name: github.com/riddhikakadiya/spdrs
+  version: 63c68234c98d52a6447ff4e2a7b67adf4a276719
+  subpackages:
+  - models
+testImports: []

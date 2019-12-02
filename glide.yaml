@@ -1,0 +1,8 @@
+package: github.com/riddhiKakadiya/spdrs
+import:
+- package: github.com/dgrijalva/jwt-go
+- package: github.com/go-sql-driver/mysql
+- package: github.com/gorilla/mux
+- package: github.com/riddhikakadiya/spdrs
+  subpackages:
+  - models
