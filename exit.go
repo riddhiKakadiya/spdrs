@@ -6,7 +6,7 @@ import (
 )
 
 func main() {
-
+	//defer is the last function to run
     defer fmt.Println("!")
 
     os.Exit(3)

@@ -17,10 +17,6 @@ import(
 //user authentication using JWT
 var jwtKey = []byte("my_secret_key")
 
-// var users = map[string]string{
-// 	"user1": "password1",
-// 	"user2": "password2",
-// }
 var users = map[string]string{
 	"user1": "password1",
 	"user2": "password2",
@@ -172,7 +168,6 @@ func main(){
    	models.DownloadData()
    	models.Csv_to_sql()
     router := mux.NewRouter()
-    // router.HandleFunc("/spdr", Signin)
     router.HandleFunc("/spdr/etfs", AvailableETFs)
     router.HandleFunc("/spdr/etfs/tickers", AvailableTickers)
 
