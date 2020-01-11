@@ -27,19 +27,17 @@ go run main.go
 
 ### Any HTTP client with support for cookies (like Postman, or your web browser) can be used to access the APIs:
 
+## 1. List of available ETF symbol
 ```bash
-1. List of available ETF symbol
-
 http://localhost:8080/spdr/etfs
 
 GET {"username":"user1","password":"password1"}
 ```
 
-## Get data for ETF by ticker
+## 2. Get data for ETF by ticker
 ```bash
-2. Get data for ETF by ticker
-
 http://localhost:8080/spdr/etfs/tickers
+
 GET {"username":"user1","password":"password1"}
 ```
 
